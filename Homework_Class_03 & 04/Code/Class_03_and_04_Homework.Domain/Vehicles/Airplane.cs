@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Class_03_and_04_Homework.Domain.Models;
 namespace Class_03_and_04_Homework.Domain.Vehicles
+
 {
-    class Airplane
+    public class Airplane : Vehicle
     {
+        public override void DisplayInfo()
+        {
+            Console.WriteLine("I'm a plane and I have a couple of wheels :)");
+        }
     }
 }
