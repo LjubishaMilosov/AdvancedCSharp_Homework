@@ -11,11 +11,10 @@ foreach (User user in results)
     Console.WriteLine($"Id: {user.Id}, Name: {user.Name}, Age: {user.Age}");
 }
 
-
-Car car = new Car();
-MotorBike motorBike = new MotorBike();
-Boat boat = new Boat();
-Airplane plane = new Airplane();
+Vehicle car = new Car();
+Vehicle motorBike = new MotorBike();
+Vehicle boat = new Boat();
+Vehicle plane = new Airplane();
 
 car.DisplayInfo();
 motorBike.DisplayInfo();

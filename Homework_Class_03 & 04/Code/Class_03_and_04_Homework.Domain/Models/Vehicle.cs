@@ -3,5 +3,7 @@
     public abstract class Vehicle
     {
         public abstract void DisplayInfo();
+        public Vehicle() { }
+       
     }
 }

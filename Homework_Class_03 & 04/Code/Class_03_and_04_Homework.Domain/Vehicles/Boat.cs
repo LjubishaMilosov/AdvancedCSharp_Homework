@@ -4,6 +4,7 @@ namespace Class_03_and_04_Homework.Domain.Vehicles
 {
     public class Boat : Vehicle
     {
+        public Boat() { }
         public override void DisplayInfo()
         {
             Console.WriteLine("I'm a boat and I do not have wheels :(");
