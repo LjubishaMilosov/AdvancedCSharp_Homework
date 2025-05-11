@@ -8,5 +8,10 @@ namespace Class_03_and_04_Homework.Domain.Vehicles
         {
             Console.WriteLine("I'm a motorbike and I drive on 2 wheels :)");
         }
+
+        public void Wheelie()
+        {
+            Console.WriteLine("Driving on one wheel");
+        }
     }
 }

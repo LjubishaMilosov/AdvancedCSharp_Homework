@@ -9,5 +9,9 @@ namespace Class_03_and_04_Homework.Domain.Vehicles
         {
             Console.WriteLine("I'm a car and I drive on 4 wheels :)");
         }
+        public void Drive()
+        {
+            Console.WriteLine("Driving");
+        }
     }
 }
