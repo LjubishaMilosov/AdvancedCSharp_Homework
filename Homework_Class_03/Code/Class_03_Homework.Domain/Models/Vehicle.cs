@@ -3,7 +3,10 @@
 {
     public class Vehicle
     {
-        public virtual void DisplayInfo() { Console.WriteLine("Vehicle info"); }
+        public virtual void DisplayInfo() 
+        { 
+            Console.WriteLine("Displaying Vehicle info"); 
+        }
         public Vehicle() { }
     }
 }
