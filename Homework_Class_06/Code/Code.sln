@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_Class_06", "Homework_Class_06\Homework_Class_06.csproj", "{61A8CB89-9E46-45DB-B60E-84A13722C8DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_Class_06.Domain", "Homework_Class_06.Domain\Homework_Class_06.Domain.csproj", "{F40F9806-4CE5-464D-93B6-40B903B4B72F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61A8CB89-9E46-45DB-B60E-84A13722C8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A8CB89-9E46-45DB-B60E-84A13722C8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A8CB89-9E46-45DB-B60E-84A13722C8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A8CB89-9E46-45DB-B60E-84A13722C8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40F9806-4CE5-464D-93B6-40B903B4B72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40F9806-4CE5-464D-93B6-40B903B4B72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40F9806-4CE5-464D-93B6-40B903B4B72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40F9806-4CE5-464D-93B6-40B903B4B72F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {267FB454-910A-4461-9ADF-1C8FCC172C30}
+	EndGlobalSection
+EndGlobal
