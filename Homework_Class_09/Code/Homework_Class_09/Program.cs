@@ -8,31 +8,31 @@ if (!Directory.Exists(myFolder))
 }
 if (!File.Exists(txtPath))
 {
-    File.Create(txtPath).Close(); 
+    File.Create(txtPath).Close();
 }
 
-if (File.Exists(txtPath))
+
+//else
+//{
+//    Console.WriteLine("The file does not exist.");
+//}
+
+List<string> existingNames = File.ReadAllLines(txtPath)
+    .Select(n => n.Trim())
+    .Where(n => !string.IsNullOrWhiteSpace(n))
+    .ToList();
+
+if (existingNames.Count == 0)
 {
-    string[] existingNames = File.ReadAllLines(txtPath);
-    if (existingNames.Length == 0 || existingNames.All(string.IsNullOrWhiteSpace))
-    {
-        Console.WriteLine("The file is empty.");
-    }
-    else
-    {
-        Console.WriteLine("Current names in the file:");
-        foreach (string name in existingNames)
-        {
-            if (!string.IsNullOrWhiteSpace(name))
-            {
-                Console.WriteLine(name);
-            }
-        }
-    }
+    Console.WriteLine("The file is empty.");
 }
 else
 {
-    Console.WriteLine("The file does not exist.");
+    Console.WriteLine("Current names in the file:");
+    foreach (string name in existingNames)
+    {
+        Console.WriteLine(name);
+    }
 }
 
 Console.WriteLine("Enter names (separated by commas):");
@@ -40,17 +40,16 @@ string? input = Console.ReadLine();
 
 if (!string.IsNullOrWhiteSpace(input))
 {
-    string[] names = input.Split(',', StringSplitOptions.RemoveEmptyEntries);
+    List<string> names = input.Split(',', StringSplitOptions.RemoveEmptyEntries)
+        .Select(n => n.Trim())
+        .Where(n => !string.IsNullOrWhiteSpace(n))
+        .ToList();
 
     using (StreamWriter writer = new StreamWriter(txtPath, append: true))
     {
         foreach (string name in names)
         {
-            string trimmedName = name.Trim();
-            if (!string.IsNullOrWhiteSpace(trimmedName))
-            {
-                writer.WriteLine(trimmedName);
-            }
+            writer.WriteLine(name);
         }
     }
     Console.WriteLine("Names have been saved to the file.");
@@ -60,11 +59,10 @@ else
     Console.WriteLine("No names entered.");
 }
 
-
-string[] allNames = File.ReadAllLines(txtPath)
+List<string> allNames = File.ReadAllLines(txtPath)
     .Select(n => n.Trim())
     .Where(n => !string.IsNullOrWhiteSpace(n))
-    .ToArray();
+    .ToList();
 
 for (char letter = 'A'; letter <= 'Z'; letter++)
 {
